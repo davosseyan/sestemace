@@ -20,24 +20,6 @@ module.exports = {
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
     
-    if (!args.length) return message.channel.send(embed);
-
-    let cmd =
-      client.commands.get(args[0].toLowerCase()) ||
-      client.commands.get(client.aliases.get(args[0].toLowerCase()));
-
-    let embed2 = new MessageEmbed()
-      .setColor(Color)
-      .setTitle(`${cmd.name} Information!`)
-      .addField(`Aliases`, cmd.aliases || "None!")
-      .addField(`Usage`, cmd.usage || "No Usage")
-      .addField(`Description`, cmd.description || "No Description!")
-      .setTimestamp();
-
-    if (cmd) {
-      return message.channel.send(embed2);
-    } else {
-      return message.channel.send(embed);
+    message.channel.send(embed);
     }
-  }
-};
+}
