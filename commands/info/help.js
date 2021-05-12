@@ -9,7 +9,7 @@ module.exports = {
   usage: "o/Help | <Command Name>",
   run: async(client, message, args) => {
     
-    message.delete();
+   
     
     let embed = new MessageEmbed()
     .setColor(Color)
