@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "clear",
@@ -35,7 +34,7 @@ module.exports = {
 
     message.channel.bulkDelete(args[0]).then(Message => {
       let embed = new Discord.MessageEmbed()
-        .setColor(Color)
+        .setColor("")
         .setTitle(`udah di apus, sans!`)
         .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
         .addField(`Channel`, `${message.channel.name} (${message.channel.id}`)
