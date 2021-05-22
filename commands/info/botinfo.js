@@ -8,7 +8,7 @@ module.exports = {
   usage: "Ping",
   run: async (client, message, args) => {
 
-const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
+/// const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
 
      
        let embed = new Discord.MessageEmbed()
