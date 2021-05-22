@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
    
-   
+    const guild = message.guild;
     const Roles = guild.roles.cache.size || "No Roles!";
     const Members = guild.memberCount;
   
@@ -19,13 +19,12 @@ module.exports = {
       .setColor("")
       .setThumbnail(guild.iconURL())
       .addField(`ID`, `${guild.id}`, true)
-      .addField(`Owner`, `${guild.owner.user.tag}`, true)
-      .addField(`Roles Count`, Roles, true)
-      .addField(`Emojis Count`, Emojis, true)
-      .addField(`Members Count`, Members, true)
-      .addField(`Humans Count`, Humans, true)
-      .addField(`Bots Count`, Bots, true)
-      .addField(`Server Created At`, guild.createdAt.toDateString())
+      .addField(`Created At`, guild.createdAt.toDateString())
+      .addField(`Owner`, `${message.guild.owner}`, true)
+      .addField(`Members`, Members, true)
+      .addField(`Channels`, `{message.guild.channels.cache.size}`, true)
+      .addField(`Roles`, Roles, true)
+       .addField(`text`, `{message.guild.channels.text.cache.size}`, true)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
