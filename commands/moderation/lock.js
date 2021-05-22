@@ -1,13 +1,14 @@
-    if (!message.member.hasPermission("MANAGE_CHANNELS"))
-      return message.channel.send("**Please Check Your Permission**");
+
+if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
+      return message.channel.send("**Please Check Your Permissions**");
     message.channel
-      .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
+      .createOverwrite(message.guild.id, { SEND_MESSAGES: false })
       .then(() => {
         const embed = new Discord.MessageEmbed()
           .setThumbnail(message.author.avatarURL())
-          .setTitle("** Unlocked Channel 🔓**")
+          .setTitle("** locked Channel :lock:**")
           .addField("Guild name", message.guild.name)
-          .addField("Channel", message.channel.name)
+          .addField("Channel", `${message.channel.name}`)
           .addField("By", `<@${message.author.id}>`, true)
           .setColor("RANDOM");
         return message.channel.send(embed);
