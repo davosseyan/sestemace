@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "ban",
@@ -46,7 +45,7 @@ module.exports = {
         User.ban({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
       let embed = new Discord.MessageEmbed()
-        .setColor(Color)
+        .setColor("")
         .setTitle(`Mampus Terbanned!`)
         .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
         .addField(`Banned Member`, `${Member.tag} (${Member.id})`)
