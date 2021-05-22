@@ -13,10 +13,40 @@ module.exports = {
     
     let embed = new MessageEmbed()
     .setColor("")
-    .setTitle(`${client.user.username} Commands!`)
-    .setDescription(`Use ${Prefix}Help <Nama Command> Untuk Informasi Lebih Banyak Tentang Command!` + 
-    "\n\n**Fun**\n`Avatar, Coinflip, Howgay, Meme, Rate, 8ball, Dicksize, Ascii, Choose, Hack, Randomnumber`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Tempmute, Kick, Ban, Unban, Tempban, Warn, Warnings, ResetWarns`" + "\n\n"+
-    "**Information**\n`Help, Covid, Weather, Userinfo, Serverinfo, Ping`")
+    .setTitle(`Help Section`)
+    .setDescription(`
+
+**General Commands**
+A!userinfo - Get your/someones information on Discord 
+A!server - Get the server information 
+A!botinfo - Ace bot info  
+A!weather - To know world's weather | usage : A!weather [state/region]  
+A!avatar - To get you/someones avatar  
+A!serveravatar - To get server's avatar 
+A!invite - To invite Ace bot to your server  
+A!listEmoji - Shows server's emojis list A!numberinv - For View number your invite   
+
+**Moderation Commands**
+A!mute - Mute someone  
+A!unmute - Unmute someone  
+A!ban - Ban someone in the server  
+A!unban - Unban someone in the server 
+A!kick - To kick someone in the server  
+A!clear - Clear chat messages 
+A!lock - To lock the channel from  
+A!unlock - To unlock the channel from  
+A!hide - Hide the channel from everyone  
+A!show - Show the hidden channel  
+A!vkick - To kick someone in voice 
+A!vmute - To mute someones mic  
+A!vunmute - Unmute the person in voice 
+A!deafen - To deaf someone in the voice 
+A!undeafen - Remove the deafen  
+A!move - to move someone  
+A!slowmode - Set the channel slowmode  
+A!allbots - For View All bot in server  
+A!roleinfo - for view role info
+`)
     .setFooter(`Requested By ${message.author.username}`)
     .setTimestamp();
     
