@@ -6,6 +6,9 @@ module.exports = {
   aliases: [],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
+
+run: async (client, message, args) => {
+
 if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("**Please Check Your Permissions**");
     message.channel
