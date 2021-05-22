@@ -29,7 +29,7 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`apa sayang?`);
+    return message.channel.send(`Bot Prefix \`${prefix}\``);
   }
 });
 
