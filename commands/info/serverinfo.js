@@ -22,9 +22,9 @@ module.exports = {
       .addField(`Created At`, guild.createdAt.toDateString())
       .addField(`Owner`, `${message.guild.owner}`, true)
       .addField(`Members`, Members, true)
-      .addField(`Channels`, `{message.guild.channels.cache.size}`)
+      .addField(`Channels`, `{client.guild.channels.cache.size}`)
       .addField(`Roles`, Roles, true)
-       .addField(`text`, `{message.guild.channels.text.cache.size}`)
+       .addField(`text`, `{client.guild.channels.text.cache.size}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
