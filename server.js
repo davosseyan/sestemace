@@ -13,7 +13,7 @@ client.on("ready", async () => {
   client.user.setStatus ("idle");
   client.user
     .setActivity(
-      `$help`,
+      `A!help`,
                           
       { type: "PLAYING" }
     )
