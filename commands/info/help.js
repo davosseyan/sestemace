@@ -44,7 +44,7 @@ A!vmute - To mute someones mic
 A!vunmute - Unmute the person in voice 
 A!deafen - To deaf someone in the voice 
 A!undeafen - Remove the deafen  
-A!move - to move someone  
+A!moveall - to move all members  
 A!slowmode - Set the channel slowmode  
 A!allbots - For View All bot in server  
 A!roleinfo - for view role info
