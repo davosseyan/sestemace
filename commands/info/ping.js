@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "ping",
@@ -12,7 +11,7 @@ module.exports = {
    
 
     const embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor("")
       .setDescription(`Pong ${client.ws.ping} ms`)
       .setFooter(`Requested By ${message.author.username}`)
       .setTimestamp();
