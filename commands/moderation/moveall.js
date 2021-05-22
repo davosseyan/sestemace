@@ -1,4 +1,13 @@
-    if (message.member.voiceChannel == null)
+ const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "moveall",
+  aliases: [],
+  description: "move all member!",
+  usage: "move all",
+  run: async (client, message, args) => {
+   if (message.member.voiceChannel == null)
       return message.channel.send(`**Go to voice and write the command**`);
     var author = message.member.voiceChannelID;
     var m = message.guild.members.cache.filter(m => m.voiceChannel);
