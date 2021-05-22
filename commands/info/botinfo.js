@@ -1,3 +1,19 @@
+const fs = require("fs");
+const Discord = require("discord.js");
+const { Color } = require("../../config.js");
+const { stripIndents } = require("common-tags");
+const moment = require("moment-timezone");
+ function duration(ms) {
+    const sec = Math.floor((ms / 1000) % 60).toString();
+    const min = Math.floor((ms / (1000 * 60)) % 60).toString();
+    const hrs = Math.floor((ms / (1000 * 60 * 60)) % 60).toString();
+    const days = Math.floor((ms / (1000 * 60 * 60 * 24)) % 60).toString();
+    return `${days.padStart(1, "0")}-${hrs.padStart(2, "0")}-${min.padStart(
+      2,
+      "0"
+    )}-${sec.padStart(2, "0")}`;
+  }
+
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
@@ -8,7 +24,7 @@ module.exports = {
   usage: "Ping",
   run: async (client, message, args) => {
 
-/// const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
+const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
 
      
        let embed = new Discord.MessageEmbed()
@@ -20,11 +36,13 @@ module.exports = {
         .addField(`**My Prefix**`,`A!`)
         .addField(`**Libary**`,`discord.js`)
         .addField(`**Discord.js Version**`,`${Discord.version}`)
-        .addField(`**Created At:**`,`NaN`)
+        .addField(`**Created At:**`,`${created}`)
         .addField(`**Ping**`,`${Math.round(client.ws.ping)}ms`)
         .addField(`**Guilds**`,`${client.guilds.cache.size}`)
-        .addField(`**Channels**`,`${client.channels.cache.size}**`)
+        .addField(`**Channels**`,`${client.channels.cache.size}`)
         .addField(`**Creator**`,`[<@817049111454154752>]`)
+        .setFooter(`Requested By ${message.author.username}`)
+        .setTimestamp();
     message.channel.send(embed);
 }
 }
