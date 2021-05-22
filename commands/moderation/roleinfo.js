@@ -6,7 +6,7 @@ module.exports = {
   aliases: [],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
-  run: async (client, message, args) => {
+  run: async (client, message) => {
 let args = message.content.split(" ").slice(1).join(" ");
 if (!args[0]) return message.channel.send("**Please Mention A Role!**")
         let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) || message.guild.roles.cache.find(r => r.name.toLowerCase() === args.join(' ').toLocaleLowerCase());
