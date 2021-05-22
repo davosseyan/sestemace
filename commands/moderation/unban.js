@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "unban",
@@ -59,7 +58,7 @@ module.exports = {
     }
 
     let embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor("")
       .setTitle(`Member Unbanned!`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}}`)
       .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id}`)
