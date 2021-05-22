@@ -34,10 +34,11 @@ const created = moment(client.user.createdAt).format("YYYY-MM-DD");
         .addField(`**My Prefix**`,`A!`)
         .addField(`**Libary**`,`discord.js`)
         .addField(`**Discord.js Version**`,`${Discord.version}`)
-        .addField(`**Created At:**`,`${created}`)
+        .addField(`**Created At:**`,`[**${created}**]`)
         .addField(`**Ping**`,`${Math.round(client.ws.ping)}ms`)
         .addField(`**Guilds**`,`${client.guilds.cache.size}`)
         .addField(`**Channels**`,`${client.channels.cache.size}`)
+        .addField(`**Users**`,`${client.users.cache.size}`)
         .addField(`**Creator**`,`[<@817049111454154752>]`)
         .setFooter(`Requested By ${message.author.username}`)
         .setTimestamp();
