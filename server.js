@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
-const { Prefix, Token, Color } = require("./config.js");
+const { Prefix } = require("./config.js");
 const fetch = require("node-fetch");
 
 client.commands = new Discord.Collection();
@@ -32,7 +32,7 @@ client.on("message", async message => {
   }
 });
 
-let modules = ["fun", "info", "moderation"];
+let modules = ["info", "moderation"];
 
 modules.forEach(function(module) {
   fs.readdir(`./commands/${module}`, function(err, files) {
