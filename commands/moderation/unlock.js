@@ -1,4 +1,5 @@
-    if (!message.member.hasPermission("MANAGE_CHANNELS"))
+ run: async (client, message, args) => { 
+  if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("**Please Check Your Permission**");
     message.channel
       .createOverwrite(message.guild.id, { SEND_MESSAGES: true })
