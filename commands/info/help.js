@@ -13,6 +13,7 @@ module.exports = {
     
     let embed = new MessageEmbed()
     .setColor("")
+    .setThumbnail(client.user.displayAvatarURL())
     .setTitle(`Help Section`)
     .setDescription(`
 
