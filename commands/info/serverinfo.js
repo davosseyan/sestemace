@@ -9,18 +9,15 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
    
-    const guild = message.guild;
-    const Emojis = guild.emojis.cache.size || "No Emoji!";
+   
     const Roles = guild.roles.cache.size || "No Roles!";
     const Members = guild.memberCount;
-    const Humans = guild.members.cache.filter(member => !member.user.bot).size;
-    const Bots = guild.members.cache.filter(member => member.user.bot).size;
+  
 
     const embed = new MessageEmbed()
-      .setTitle(guild.name + " Information!")
+      .setTitle(guild.name + " Info")
       .setColor("")
       .setThumbnail(guild.iconURL())
-      .addField(`Name`, guild.name, true)
       .addField(`ID`, `${guild.id}`, true)
       .addField(`Owner`, `${guild.owner.user.tag}`, true)
       .addField(`Roles Count`, Roles, true)
