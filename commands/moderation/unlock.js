@@ -1,4 +1,13 @@
- run: async (client, message, args) => { 
+ const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "unlock",
+  aliases: [],
+  description: "Ban A Member!",
+  usage: "Ban <Mention Member>",
+
+run: async (client, message, args) => { 
   if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("**Please Check Your Permission**");
     message.channel
