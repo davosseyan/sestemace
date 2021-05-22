@@ -23,7 +23,7 @@ const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
         .addField(`**Created At:**`,`${created}`)
         .addField(`**Ping**`,`${Math.round(client.ws.ping)}ms`)
         .addField(`**Guilds**`,`${client.guilds.cache.size}`)
-        .addField(`**Channels**`,``)
+        .addField(`**Channels**`,`${client.channels.cache.size}**`)
         .addField(`**Creator**`,`[<@817049111454154752>]`)
     message.channel.send(embed);
 }
