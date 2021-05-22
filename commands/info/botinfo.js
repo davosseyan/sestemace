@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "ping",
+  name: "botinfo",
   aliases: [],
   description: "Pong!",
   usage: "Ping",
