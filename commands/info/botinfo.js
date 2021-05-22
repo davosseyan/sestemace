@@ -1,3 +1,12 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "ping",
+  aliases: [],
+  description: "Pong!",
+  usage: "Ping",
+  run: async (client, msg, args) => {
 const embed = new Discord.MessageEmbed()
 .setAuthor(client.user.username,client.user.avatarURL())
 .setThumbnail(client.user.avatarURL())
