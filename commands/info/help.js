@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color, Prefix } = require("../../config.js");
+const { Prefix } = require("../../config.js");
 
 module.exports = {
   name: "help",
@@ -12,7 +12,7 @@ module.exports = {
    
     
     let embed = new MessageEmbed()
-    .setColor(Color)
+    .setColor("")
     .setTitle(`${client.user.username} Commands!`)
     .setDescription(`Use ${Prefix}Help <Nama Command> Untuk Informasi Lebih Banyak Tentang Command!` + 
     "\n\n**Fun**\n`Avatar, Coinflip, Howgay, Meme, Rate, 8ball, Dicksize, Ascii, Choose, Hack, Randomnumber`" + "\n\n" + "**Moderation**\n`Clear, Mute, Unmute, Tempmute, Kick, Ban, Unban, Tempban, Warn, Warnings, ResetWarns`" + "\n\n"+
