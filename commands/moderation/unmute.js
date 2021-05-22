@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "unmute",
@@ -29,7 +28,7 @@ module.exports = {
     }
 
     let Embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor("")
       .setTitle(`Member Unmuted!`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
       .addField(`Unmuted Member`, `${Member.user.tag} (${Member.user.id})`)
