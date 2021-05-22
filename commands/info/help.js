@@ -24,7 +24,8 @@ A!botinfo - Ace bot info
 A!weather - To know world's weather | usage : A!weather [state/region]  
 A!avatar - To get you/someones avatar  
 A!serveravatar - To get server's avatar 
-A!invite - To invite Ace bot to your server  
+A!invite - To invite Ace bot to your server
+A!roles - To show role server
 A!listEmoji - Shows server's emojis list A!numberinv - For View number your invite   
 
 **Moderation Commands**
