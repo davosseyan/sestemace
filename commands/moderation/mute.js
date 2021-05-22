@@ -8,7 +8,10 @@ module.exports = {
   usage: "Mute <Mention User> | <Reason>",
   run: async (client, message, args) => {
     //Start
-   
+     if (!message.member.hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command!`
+      );
 
     let Member =
       message.mentions.members.first() ||
