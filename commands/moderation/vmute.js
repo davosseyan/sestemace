@@ -1,3 +1,12 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "vmute",
+  aliases: [],
+  description: "Ban A Member!",
+  usage: "Ban <Mention Member>",
+  run: async (client, message, args) => {
 if (!message.member.hasPermission("MUTE_MEMBERS"))
       return message.channel
         .sendMessage("**You dont Have premisssion Mutevoicr** ")
