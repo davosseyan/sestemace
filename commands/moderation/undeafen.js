@@ -9,10 +9,10 @@ module.exports = {
   run: async (client, msg, args) => {
 var deafuser = msg.mentions.members.first();
    
-    if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("pewist ba role a bo anjamdane amkara");
+    if (!msg.member.hasPermission("DEAFEN_MEMBERS")) return msg.channel.send("You don‘t have a \`DEAFEN_MEMBERS\`");
     if (!deafuser) return msg.channel.send("mention someone");
  
-  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("sarata rolem bare inja bakarm hena");
+  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
     var muteEmbed = new Discord.MessageEmbed() 
     .setTitle("Undeafen")
     .addField("Undeafen user", deafuser)
