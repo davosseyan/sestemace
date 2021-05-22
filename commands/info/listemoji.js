@@ -1,3 +1,12 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "listemoji",
+  aliases: ["emojilist"],
+  description: "Help Command!",
+  usage: "o/Help | <Command Name>",
+  run: async(client, message, args) => {
 try {
     let notAnimated = [];
     let animated = [];
