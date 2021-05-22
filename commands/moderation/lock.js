@@ -1,4 +1,11 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 
+module.exports = {
+  name: "lock",
+  aliases: [],
+  description: "Ban A Member!",
+  usage: "Ban <Mention Member>",
 if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("**Please Check Your Permissions**");
     message.channel
