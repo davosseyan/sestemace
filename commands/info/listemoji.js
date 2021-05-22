@@ -23,4 +23,4 @@ try {
   } catch (err) {
     message.channel.send('Their was an error!\n' + err).catch();
   }
-};
+}}
