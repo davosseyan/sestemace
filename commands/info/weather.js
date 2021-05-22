@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const weather = require("weather-js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "weather",
@@ -26,7 +25,7 @@ module.exports = {
       var location = result[0].location;
 
       const Weather = new Discord.MessageEmbed()
-        .setColor(Color)
+        .setColor("")
         .setTitle(`${location.name} Weather!`)
         .setDescription(`${current.skytext}`)
         .setThumbnail(current.imageUrl)
