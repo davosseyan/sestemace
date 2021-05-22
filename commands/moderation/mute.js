@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "mute",
@@ -31,7 +30,7 @@ module.exports = {
     let Reason = args.slice(1).join(" ");
 
     let Embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor("")
       .setTitle(`Member Muted!`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
       .addField(`Muted Member`, `${Member.user.tag} (${Member.user.id})`)
