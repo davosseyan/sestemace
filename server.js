@@ -14,8 +14,7 @@ client.on("ready", async () => {
   client.user.setStatus ("idle");
   client.user
     .setActivity(
-      `A!help`,
-      `${client.guilds.cache.size} Guilds`,
+      `A!help | ${client.guilds.cache.size} Guilds `,
                           
       { type: "PLAYING" }
     )
