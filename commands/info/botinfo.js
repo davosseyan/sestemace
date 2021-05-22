@@ -14,8 +14,6 @@ const moment = require("moment-timezone");
     )}-${sec.padStart(2, "0")}`;
   }
 
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "botinfo",
