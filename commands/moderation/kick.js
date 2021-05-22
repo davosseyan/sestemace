@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "kick",
@@ -48,7 +47,7 @@ module.exports = {
         User.kick({ reason: `${Reason || "No Reason Provided!"}` });
       }, 2000);
       let embed = new Discord.MessageEmbed()
-        .setColor(Color)
+        .setColor("")
         .setTitle(`Mampus Terkick!`)
         .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
         .addField(`Kicked Member`, `${Member.tag} (${Member.id})`)
