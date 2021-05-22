@@ -1,3 +1,12 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "slowmode",
+  aliases: ["slowmode"],
+  description: "Clear Your Messages!",
+  usage: "Clear <Message Amount>",
+  run: async (client, message, args) => {
 if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
       return message.channel.send("🧐 - Please Check Your Permission");
     if (
