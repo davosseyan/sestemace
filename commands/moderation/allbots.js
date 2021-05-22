@@ -1,3 +1,8 @@
+module.exports = {
+  name: "allbots",
+  aliases: [],
+
+  run: async (client, message, args) => {
 let i = 1;
     
     const botssize = message.guild.members.cache
