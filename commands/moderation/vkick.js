@@ -1,4 +1,11 @@
-if (message.content.startsWith(prefix + "vkick")) {
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+  name: "vkick",
+  aliases: [],
+ 
+  run: async (client, message, args) => {
     let args = message.content.split(" ");
     let user = message.guild.member(
       message.mentions.users.first() || message.guild.members.cache.get(args[1])
@@ -20,4 +27,4 @@ if (message.content.startsWith(prefix + "vkick")) {
       `**${user.user.username}** has been kicked from **Voice Channel**`
     )
   }
-});
+}
