@@ -7,6 +7,12 @@ module.exports = {
   description: "move all member!",
   usage: "move all",
   run: async (client, message, args) => {
+
+  if (!message.member.hasPermission("MOVE_MEMBERS"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command!`
+      );
+
    if (message.member.voiceChannel == null)
       return message.channel.send(`**Go to voice and write the command**`);
     var author = message.member.voiceChannelID;
