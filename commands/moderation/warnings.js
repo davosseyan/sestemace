@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 
 module.exports = {
   name: "warnings",
@@ -22,7 +21,7 @@ module.exports = {
     );
 
     let embed = new MessageEmbed()
-      .setColor(Color)
+      .setColor("")
       .setTitle(`Member Warnings!`)
       .setDescription(`${Member.user.username} Has ${Warnings || "0"} Warnings!`)
       .setFooter(`Requested by ${message.author.username}`)
