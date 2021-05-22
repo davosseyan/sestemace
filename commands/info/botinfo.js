@@ -6,7 +6,7 @@ module.exports = {
   aliases: [],
   description: "Pong!",
   usage: "Ping",
-  run: async (client, message, args, prefix) => {
+  run: async (client, message, args) => {
 
 const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
 
@@ -17,7 +17,7 @@ const created = moment(bot.user.createdAt).format("YYYY-MM-DD");
         .setThumbnail(client.user.displayAvatarURL())
         .addField(`**My Name:**`,`${client.user.tag}`)
         .addField(`**My ID**`,`${client.user.id}`)
-        .addField(`**My Prefix**`,`[ ${prefix} ]`)
+        .addField(`**My Prefix**`,`A!`)
         .addField(`**Libary**`,`discord.js`)
         .addField(`**Discord.js Version**`,`${Discord.version}`)
         .addField(`**Created At:**`,`${created}`)
