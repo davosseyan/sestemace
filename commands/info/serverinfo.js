@@ -40,46 +40,51 @@ module.exports = {
     ).size;
 
     const black = new Discord.MessageEmbed()
-      .setTitle("Naar Code")
+      
       .setColor("BLACK")
       .addFields(
         {
-          name: `🆔 Server ID`,
+          name: `🆔 **__Server ID:__**`,
           value: `${message.guild.id}`,
           inline: true
         },
         {
-          name: `📆 Created On`,
+          name: `📆 **__Created On:__**`,
           value: message.guild.createdAt.toLocaleString(),
           inline: true
         },
         {
-          name: `👑 Owner By`,
+          name: `👑 **__Owner By:__**`,
           value: `${message.guild.owner}`,
           inline: true
         },
         {
-          name: `👥 Members (${message.guild.memberCount})`,
-          value: `**${online}** Online \n **${message.guild.premiumSubscriptionCount}** Boosts ✨`,
+          name: `👥 **__Members:__**\n${message.guild.memberCount}`,
+          value: ``,
           inline: true
         },
         {
-          name: `💬 Channels (${chs})`,
-          value: `**${text}** Text | **${voice}** Voice`,
+          name: `**__Server Online__**`,
+          value: `${online} Online`,
+          inline: true
+        },
+         {
+          name: `💬 **__Channels:__** (${chs})`,
+          value: `${text} Text | ${voice} Voice`,
           inline: true
         },
         {
-          name: `🌍 Others`,
-          value: `**Region:** ${message.guild.region}\n**Verification Level:** ${message.guild.mfaLevel}`,
+          name: `**__Region__**:`,
+          value: `${message.guild.region}`,
           inline: true
         },
         {
-          name: `🔐 Roles (${roles})`,
-          value: `To see a list with all roles use . roles`,
+          name: `**__Roles__**\n${roles}`,
+          value: ``,
           inline: true
         }
       )
-      .setFooter("CREATED BY LORD", message.author.avatarURL());
+     
     message.channel.send(black);
   }
 }
