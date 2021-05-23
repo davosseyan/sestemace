@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
    
-    if (!message.channel.guild)
+        if (!message.channel.guild)
       return message.channel.send("This is for servers only");
 
     const text = message.guild.channels.cache.filter(r => r.type === "text")
@@ -23,45 +23,63 @@ module.exports = {
 
     const roles = message.guild.roles.cache.size;
 
-    
-   
+    const online = message.guild.members.cache.filter(
+      m => m.presence.status === "online"
+    ).size;
 
-    const embed = new Discord.MessageEmbed()
-     .setTitle(`${guild.name} Info`)
+    const idle = message.guild.members.cache.filter(
+      m => m.presence.status === "idle"
+    ).size;
+
+    const offline = message.guild.members.cache.filter(
+      m => m.presence.status === "offline"
+    ).size;
+
+    const dnd = message.guild.members.cache.filter(
+      m => m.presence.status === "dnd"
+    ).size;
+
+    const black = new Discord.MessageEmbed()
+      .setTitle("Naar Code")
       .setColor("BLACK")
       .addFields(
         {
-          name: `🆔 **__Server ID:__**`,
+          name: `🆔 Server ID`,
           value: `${message.guild.id}`,
           inline: true
         },
         {
-          name: `📆 **__Created On:__**`,
+          name: `📆 Created On`,
           value: message.guild.createdAt.toLocaleString(),
           inline: true
         },
         {
-          name: `👑 **__Owner By:__**`,
+          name: `👑 Owner By`,
           value: `${message.guild.owner}`,
           inline: true
         },
         {
-          name: `💬 **__Channels:__** (${chs})`,
+          name: `👥 Members (${message.guild.memberCount})`,
+          value: `**${online}** Online \n **${message.guild.premiumSubscriptionCount}** Boosts ✨`,
+          inline: true
+        },
+        {
+          name: `💬 Channels (${chs})`,
           value: `**${text}** Text | **${voice}** Voice`,
           inline: true
         },
         {
-          name: `**__Region__**:`,
-          value: `${message.guild.region}`,
+          name: `🌍 Others`,
+          value: `**Region:** ${message.guild.region}\n**Verification Level:** ${message.guild.mfaLevel}`,
           inline: true
         },
         {
-          name: `**__Roles__**`,
-          value: `${roles}`,
+          name: `🔐 Roles (${roles})`,
+          value: `To see a list with all roles use . roles`,
           inline: true
         }
       )
-      
-    message.channel.send(embed);
+      .setFooter("CREATED BY LORD", message.author.avatarURL());
+    message.channel.send(black);
   }
 }
