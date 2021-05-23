@@ -27,7 +27,7 @@ module.exports = {
        .addField(`👥**__Members:__**`, Members, true)
        .addField(`**__Server Online__**`, `${message.guild.members.cache.filter(m => m.user.presence.status == "online").size}`)
        .addField(`💬**__Channels:__** (${channels})`, `${text} Text | ${voice} Voice `)
-       .addField(`**__Region__**:`, region, true)
+       .addField(`**__Region__**:`, `${message.guild.region}`)
        .addField(`**__Roles__**`, Roles, true)
 
      message.channel.send(embed);
