@@ -19,7 +19,7 @@ module.exports = {
     };
 
     const embed = new MessageEmbed()
-      .setTitle(`${member.user.displayAvatarURL}`,`${message.author.username}`)
+      .setTitle(`${message.author.username}`)
       .setColor("")
       .setThumbnail(member.user.displayAvatarURL())
       .addField("**Join Date**", member.joinedAt.toDateString())
