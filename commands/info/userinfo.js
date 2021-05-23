@@ -24,10 +24,9 @@ module.exports = {
       .setThumbnail(member.user.displayAvatarURL())
       .addField("**Join Date**", member.joinedAt.toDateString())
       .addField("**Create Date**", member.user.createdAt.toDateString())
-      .addField("**Other Information**",``)
-      .addField("ID", `${member.id}`, true)
-      .addField("Nama", member.user.tag, true)
-      .addField("Status", statuses[member.presence.status], true)
+      .addField("**Other Information**\n**ID**", `${member.id}`, true)
+      .addField("**Name Tag**", member.user.tag, true)
+      .addField("**Status**", statuses[member.presence.status], true)
     message.channel.send(embed);
 
     //End
