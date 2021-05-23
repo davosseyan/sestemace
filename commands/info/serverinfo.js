@@ -8,8 +8,11 @@ module.exports = {
   usage: "Serverinfo",
   run: async (client, message, args) => {
     //Start
-   
-        const guild = message.guild;
+   const text = message.guild.channels.cache.filter(r => r.type === "text")
+       .size;
+     const voice = message.guild.channels.cache.filter(r => r.type === "voice")
+       .size;
+     const guild = message.guild;
      const channels = message.guild.channels.cache.size;
      const Roles = guild.roles.cache.size || "No Roles!";
      const Members = guild.memberCount;
