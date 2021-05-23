@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
  if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.channel.send(
-        `>>> \`\`\`You Don't have the permission : \`\`\` \n\n **\`MANAGE_CHANNELS\`**`
+        `You Don't have the permission : \`MANAGE_CHANNELS\``
       );
     let channel = message.mentions.channels.first();
     let channel_find = message.guild.channels.cache.find(
