@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "discord-backup": "^2.4.1",
+    "@sentry/node": "^6.2.2",
     "discord.js": "^12.5.2",
     "moment-timezone": "^0.5.33",
     "fs": "^0.0.2",
