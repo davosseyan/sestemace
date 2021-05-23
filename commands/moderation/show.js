@@ -11,13 +11,13 @@ module.exports = {
       return message.channel.send(
         `>>> \`\`\`You Don't have the permission : \`\`\` \n\n **\`MANAGE_CHANNELS\`**`
       );
-   
+    let channel = message.mentions.channels.first();
     let channel_find = message.guild.channels.cache.find(
       ch => ch.id == channel
     );
     if (!channel)
       return message.channel.send(
-        `**True Use CMD: ${prefix}show \`<MentionChannel>\`**`
+        `**True Use CMD: A!show \`<MentionChannel>\`**`
       );
     if (!channel_find)
       return message.channel.send(`**:x: | Error, Not Found**`);
