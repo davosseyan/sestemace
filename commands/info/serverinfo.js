@@ -9,45 +9,77 @@ module.exports = {
   run: async (client, message, args) => {
     //Start
    
-    const guild = message.guild;
-    const channels = message.guild.channels.cache.size;
-    const Roles = guild.roles.cache.size || "No Roles!";
-    const Members = guild.memberCount;
-  let region;
-        switch (message.guild.region) {
-            case "europe":
-                region = 'Europe';
-                break;
-            case "us-east":
-                region = 'us-east'
-                break;
-            case "us-west":
-                region = 'us-west';
-                break;
-            case "us-south":
-                region = 'us-south'
-                break;
-            case "us-central":
-                region = 'us-central'
-                break;
+    if (!message.channel.guild)
+      return message.channel.send("This is for servers only");
+
+    const text = message.guild.channels.cache.filter(r => r.type === "text")
+      .size;
+    const voice = message.guild.channels.cache.filter(r => r.type === "voice")
+      .size;
+    const chs = message.guild.channels.cache.size;
+    const avaibles = message.guild.features
+      .map(features => features.toString())
+      .join("\n");
+
+    const roles = message.guild.roles.cache.size;
+
+    const online = message.guild.members.cache.filter(
+      m => m.presence.status === "online"
+    ).size;
+
+    const idle = message.guild.members.cache.filter(
+      m => m.presence.status === "idle"
+    ).size;
+
+    const offline = message.guild.members.cache.filter(
+      m => m.presence.status === "offline"
+    ).size;
+
+    const dnd = message.guild.members.cache.filter(
+      m => m.presence.status === "dnd"
+    ).size;
+
+    const black = new Discord.MessageEmbed()
+      .setTitle("")
+      .setColor("BLACK")
+      .addFields(
+        {
+          name: `🆔 **__Server ID:__**`,
+          value: `${message.guild.id}`,
+          inline: true
+        },
+        {
+          name: `📆 **__Created On:__**`,
+          value: message.guild.createdAt.toLocaleString(),
+          inline: true
+        },
+        {
+          name: `👑 **__Owner By:__**`,
+          value: `${message.guild.owner}`,
+          inline: true
+        },
+        {
+          name: `👥 **__Members:__** (${message.guild.memberCount})`,
+          value: `${online} Online`,
+          inline: true
+        },
+        {
+          name: `💬 **__Channels:__** (${chs})`,
+          value: `**${text}** Text | **${voice}** Voice`,
+          inline: true
+        },
+        {
+          name: `**__Region__**:`,
+          value: `${message.guild.region}`,
+          inline: true
+        },
+        {
+          name: `**__Roles__**`,
+          value: `${roles}`,
+          inline: true
         }
- 
-
-    const embed = new MessageEmbed()
-      .setTitle(guild.name + " Info")
-      .setColor("")
-      .setThumbnail(guild.iconURL())
-      .addField(`🆔**__Server ID:__**`, `${guild.id}`, true)
-      .addField(`📆**__Created On:__**`, guild.createdAt.toDateString())
-      .addField(`👑**__Owned by:__**`, `${message.guild.owner}`, true)
-      .addField(`👥**__Members:__**`, Members, true)
-      .addField(`**__Server Online__**`, `${message.guild.members.cache.filter(m => m.user.presence.status == "online").size}`)
-      .addField(`💬**__Channels:__**`, `(${channels})`)
-      .addField(`**__Region__**:`, region, true)
-      .addField(`**__Roles__**`, Roles, true)
-
-    message.channel.send(embed);
-
-    //End
+      )
+      
+    message.channel.send(black);
   }
-};
+}
