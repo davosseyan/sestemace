@@ -18,7 +18,7 @@ name: "backup",
       );
 		const status = args[1];
 		if(!status){
-			return message.reply(" Select an action between: `create`,`load` and `info`!");
+			return message.reply(" Select an action between: `create`,`load`!");
 		}
     
 		if(status === "create"){
