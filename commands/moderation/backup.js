@@ -4,7 +4,7 @@ const Discord = require("discord.js"),
       backup = require("discord-backup"),
       Sentry = require("@sentry/node");
 
-name: "ban",
+name: "backup",
   aliases: [],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
