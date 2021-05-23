@@ -5,7 +5,7 @@ const Discord = require("discord.js"),
       Sentry = require("@sentry/node");
 
 name: "backup",
-  aliases: [],
+  aliases: ["xenon"],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
   run: async (client, message, args) => {
