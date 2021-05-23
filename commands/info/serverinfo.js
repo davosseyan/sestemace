@@ -23,13 +23,10 @@ module.exports = {
 
     const roles = message.guild.roles.cache.size;
 
-    const online = message.guild.members.cache.filter(
-      m => m.presence.status === "online"
-    ).size;
-
+    
    
 
-    const zalm = new Discord.MessageEmbed()
+    const embed = new Discord.MessageEmbed()
      .setTitle(`${guild.name} Info`)
       .setColor("BLACK")
       .addFields(
@@ -49,11 +46,6 @@ module.exports = {
           inline: true
         },
         {
-          name: `👥 **__Members:__** (${message.guild.memberCount})`,
-          value: `${online} Online`,
-          inline: true
-        },
-        {
           name: `💬 **__Channels:__** (${chs})`,
           value: `**${text}** Text | **${voice}** Voice`,
           inline: true
@@ -70,6 +62,6 @@ module.exports = {
         }
       )
       
-    message.channel.send(zalm);
+    message.channel.send(embed);
   }
 }
