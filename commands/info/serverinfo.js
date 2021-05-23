@@ -27,20 +27,10 @@ module.exports = {
       m => m.presence.status === "online"
     ).size;
 
-    const idle = message.guild.members.cache.filter(
-      m => m.presence.status === "idle"
-    ).size;
-
-    const offline = message.guild.members.cache.filter(
-      m => m.presence.status === "offline"
-    ).size;
-
-    const dnd = message.guild.members.cache.filter(
-      m => m.presence.status === "dnd"
-    ).size;
+   
 
     const zalm = new Discord.MessageEmbed()
-     .setTitle(guild.name + " Info")
+     .setTitle(`${guild.name} Info`)
       .setColor("BLACK")
       .addFields(
         {
