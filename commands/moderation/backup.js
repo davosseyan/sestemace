@@ -3,17 +3,18 @@ const Discord = require("discord.js"),
       fetch = require("node-fetch"),
       backup = require("discord-backup"),
       Sentry = require("@sentry/node");
-module.exports = {
-  name: "backup",
-  aliases: ["serverbackup","Backup"],
-  description: "create server backup.",
-  usage: ["backup create", "backup load <backupID>", "backup info <backupID>"],
-  enabled: true,
-  memberPermissions: [ "SEND_MESSAGES","MANAGE_GUILD" ],
-  botPermissions: [ "SEND_MESSAGES", "EMBED_LINKS", "ADMINISTRATOR" ],
-  ownerOnly: false,
-  cooldown: 6000,
-  run: async (client, message, args, dev,dev2) => {
+
+name: "ban",
+  aliases: [],
+  description: "Ban A Member!",
+  usage: "Ban <Mention Member>",
+  run: async (client, message, args) => {
+    //Start
+   
+    if (!message.member.hasPermission("ADMINISTRATOR"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command!`
+      );
 		const status = args[1];
 		if(!status){
 			return message.reply(" Select an action between: `create`,`load` and `info`!");
