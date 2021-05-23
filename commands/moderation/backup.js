@@ -4,8 +4,9 @@ const Discord = require("discord.js"),
       backup = require("discord-backup"),
       Sentry = require("@sentry/node");
 
+module.exports = {
 name: "backup",
-  aliases: ["xenon"],
+  aliases: [],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
   run: async (client, message, args) => {
