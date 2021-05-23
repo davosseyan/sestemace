@@ -22,7 +22,7 @@ module.exports = {
        .setColor("")
        .setThumbnail(guild.iconURL())
        .addField(`🆔 **__Server ID:__**`, `${guild.id}`, true)
-       .addField(`📆 **__Created On:__**`, message.guild.createdAt.toLocaleString())
+       .addField(`📆 **__Created On:__**`, message.guild.createdAt.toDateString())
        .addField(`👑 **__Owned by:__**`, `${message.guild.owner}`, true)
        .addField(`👥 **__Members:__**`, Members, true)
        .addField(`**__Server Online__**`, `${message.guild.members.cache.filter(m => m.user.presence.status == "online").size}`)
