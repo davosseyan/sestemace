@@ -39,8 +39,8 @@ module.exports = {
       m => m.presence.status === "dnd"
     ).size;
 
-    const black = new Discord.MessageEmbed()
-      .setTitle("")
+    const zalm = new Discord.MessageEmbed()
+     .setTitle(guild.name + " Info")
       .setColor("BLACK")
       .addFields(
         {
@@ -80,6 +80,6 @@ module.exports = {
         }
       )
       
-    message.channel.send(black);
+    message.channel.send(zalm);
   }
 }
