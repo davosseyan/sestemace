@@ -15,10 +15,10 @@ run: async (client, message, args) => {
       .then(() => {
         const embed = new Discord.MessageEmbed()
           .setThumbnail(message.author.avatarURL())
-          .setTitle("** Unlocked Channel 🔓**")
-          .addField("Guild name", message.guild.name)
-          .addField("Channel", message.channel.name)
-          .addField("By", `<@${message.author.id}>`, true)
+          .setTitle("**Unlocked Channel 🔓**")
+          .addField("**Guild name:**", message.guild.name)
+          .addField("**Channel:**", <#${message.channel.id}>`, true)
+          .addField("**Unlocked by:**", `<@${message.author.id}>`, true)
           .setColor("RANDOM");
         return message.channel.send(embed);
       });
