@@ -6,20 +6,28 @@ module.exports = {
   aliases: [],
   description: "Mute A User!",
   usage: "Mute <Mention User> | <Reason>",
-  run: async (client, msg, args) => {   
-var deafuser = msg.mentions.members.first();
+  run: async (client, message, args) => {   
+var deafuser = message.mentions.members.first();
    
-    if (!msg.member.hasPermission("DEAFEN_MEMBERS")) return msg.channel.send("You don‘t have a \`DEAFEN_MEMBERS\`");
-    if (!deafuser) return msg.channel.send("mention someone");
+    if (!message.member.hasPermission("DEAFEN_MEMBERS")) return message.channel.send("You don‘t have a \`DEAFEN_MEMBERS\`");
+    if (!deafuser) return message.channel.send("mention someone");
  
-  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
-    var muteEmbed = new Discord.MessageEmbed() 
-    .setTitle("Deafen Voice")
-    .addField("Deafen user", deafuser)
-    .setFooter(`Deafen by ${msg.author.tag}`)
-    .setTimestamp()
+  if (!message.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return message.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
+   
+ let Reason = args.slice(1).join(" ") || "No Reason Provided!";
+
+   
+      var embed = new Discord.MessageEmbed()
+        .setColor("")
+        .setTitle(`Command : Clear`)
+        .addField(`**Cleared by:**`, `<@${message.author.id}>`)
+        .addField(`**Channel:**`, `<#${message.channel.id}>`)
+        .addField(`**Deleted Messages:**`, `${Message.size}`)
+        .addField(`**Reason:**`, `${Reason}`)
+        .setFooter(`${message.author.username}`)
+        .setTimestamp();
       deafuser.voice.setDeaf(true)
-    msg.channel.send(muteEmbed);
+    message.channel.send(embed);
  
   }
 }
