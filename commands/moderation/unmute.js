@@ -32,10 +32,10 @@ module.exports = {
 
     let Embed = new MessageEmbed()
       .setColor("")
-      .setTitle(`Member Unmuted!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Unmuted Member`, `${Member.user.tag} (${Member.user.id})`)
-      .setFooter(`Requested by ${message.author.username}`)
+      .setTitle(`Command : Unmuted`)
+      .addField(`**Member unmute:**`, `${Member.user.tag} (${Member.user.id})`)
+      .addField(`**muted by:**`, `${message.author.tag} (${message.author.id}`)
+      .setFooter(`${message.author.username}`)
       .setTimestamp();
 
     if (Role && Member.roles.cache.has(Role)) {
