@@ -46,22 +46,22 @@ module.exports = {
       }, 2000);
       let embed = new Discord.MessageEmbed()
         .setColor("")
-        .setTitle(`Mampus Terbanned!`)
-        .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Banned Member`, `${Member.tag} (${Member.id})`)
-        .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-        .setFooter(`Requested by ${message.author.username}`)
-        .setTimestamp();
+        .setTitle(`Command : Ban ✈️`)
+        .addField(`Moderator`, `<@${message.author.id}>`)
+        .addField(`Banned Member`, `<@${Member.id}>`)
+        .addField(`Reason`, `${Reason || "There was no reason!"}`)
+        .setFooter(`${message.author.username}`)
+       
       if (User && Member.bot === false)
         Member.send(
           `You Have Been Banned From **${message.guild.name}** For ${Reason ||
-            "No Reason Provided!"}`
+            "There was no reason!"}`
         );
       message.channel.send(embed);
       console.log(
-        `User: ${Member.tag} (${Member.id}) Just Got Banned From ${
+        `User: ${Member.tag} Just Got Banned From ${
           message.guild.name
-        } For ${Reason || "No Reason Provided!"}`
+        } For ${Reason || "There was no reason!"}`
       );
     } catch (error) {
       return message.channel
