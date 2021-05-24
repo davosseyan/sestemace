@@ -16,7 +16,7 @@ var deafuser = message.mentions.members.first();
     var embed = new Discord.MessageEmbed() 
     .setTitle("Undeafen Voice")
     .addField("**Undeafen user:**", deafuser)
-     .addField("**Deafen by:**", `<@${message.author.id}>`)
+     .addField("**Undeafen by:**", `<@${message.author.id}>`)
      .setFooter(`${message.author.tag}`)
      .setTimestamp()
      deafuser.voice.setDeaf(false)
