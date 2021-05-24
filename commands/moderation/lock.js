@@ -16,10 +16,10 @@ if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
       .then(() => {
         const embed = new Discord.MessageEmbed()
           .setThumbnail(message.author.avatarURL())
-          .setTitle("** locked Channel :lock:**")
-          .addField("Guild name", message.guild.name)
-          .addField("Channel", `${message.channel.name}`)
-          .addField("By", `<@${message.author.id}>`, true)
+          .setTitle("**Locked Channel 🔒**")
+          .addField("**Guild name:**", message.guild.name)
+          .addField("**Channel:**", `<#${message.channel.id}>`)
+          .addField("**Locked by:**", `<@${message.author.id}>`, true)
           .setColor("RANDOM");
         return message.channel.send(embed);
       });
