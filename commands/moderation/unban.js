@@ -47,7 +47,7 @@ module.exports = {
         "Please Give Valid Member ID Or Member Is Not Banned!"
       );
 
-    let Reason = args.slice(1).join(" ") || "No Reason Provided!";
+    let Reason = args.slice(1).join(" ") || "With out reason";
 
     try {
       message.guild.members.unban(Member.user.id, Reason);
@@ -59,11 +59,11 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor("")
-      .setTitle(`Member Unbanned!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}}`)
-      .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id}`)
-      .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-      .setFooter(`Requested by ${message.author.username}`)
+      .setTitle(`Command : Unban 🛬`)
+      .addField(`**Unbanned By:**`, `${message.author.tag} (${message.author.id}}`)
+      .addField(`**Unbanned:**`, `${Member.user.tag} (${Member.user.id}`)
+      .addField(`**With Reason:**`, `${Reason || "With out reason"}`)
+      .setFooter(`${message.author.username}`)
       .setTimestamp();
 
     return message.channel.send(embed);
