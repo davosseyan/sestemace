@@ -34,11 +34,11 @@ module.exports = {
 
     let Embed = new MessageEmbed()
       .setColor("")
-      .setTitle(`Member Muted!`)
-      .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-      .addField(`Muted Member`, `${Member.user.tag} (${Member.user.id})`)
-      .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-      .setFooter(`Requested by ${message.author.username}`)
+      .setTitle(`Command : Mute`)
+      .addField(`**Member mute:**`, `<@${Member.user.id}>`)
+      .addField(`**muted by:**`, `<@${message.author.id}>`)
+      .addField(`**Reason:***`, `${Reason || "No Reason Provided!"}`)
+      .setFooter(`${message.author.username}`)
       .setTimestamp();
 
     if (Role && !Member.roles.cache.has(Role)) {
