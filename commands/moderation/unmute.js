@@ -34,7 +34,7 @@ module.exports = {
  
     let Embed = new MessageEmbed()
       .setColor("")
-      .setTitle(`Command : Unmuted`)
+      .setTitle(`Command : Unmute`)
       .addField(`**Member unmute:**`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`**muted by:**`, `${message.author.tag} (${message.author.id}`)
       .addField(`**Reason:***`, `${Reason || "No Reason Provided!"}`)
