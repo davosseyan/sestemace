@@ -19,8 +19,8 @@ var deafuser = message.mentions.members.first();
    
       var embed = new Discord.MessageEmbed()
         .setColor("")
-        .setTitle(`Command : Clear`)
-        .addField(`**Cleared by:**`, `<@${message.author.id}>`)
+        .setTitle(`Command : Deafen`)
+        .addField(`**Deafened by:**`, `<@${message.author.id}>`)
         .addField(`**Channel:**`, `<#${message.channel.id}>`)
         .addField(`**Deleted Messages:**`, `${Message.size}`)
         .addField(`**Reason:**`, `${Reason}`)
