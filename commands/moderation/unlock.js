@@ -17,7 +17,7 @@ run: async (client, message, args) => {
           .setThumbnail(message.author.avatarURL())
           .setTitle("**Unlocked Channel 🔓**")
           .addField("**Guild name:**", message.guild.name)
-          .addField("**Channel:**", <#${message.channel.id}>`, true)
+          .addField("**Channel:**", `<#${message.channel.id}>`)
           .addField("**Unlocked by:**", `<@${message.author.id}>`, true)
           .setColor("RANDOM");
         return message.channel.send(embed);
