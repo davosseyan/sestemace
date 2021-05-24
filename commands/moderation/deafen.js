@@ -14,18 +14,12 @@ var deafuser = message.mentions.members.first();
  
   if (!message.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return message.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
    
- let Reason = args.slice(1).join(" ") || "No Reason Provided!";
-
-   
-      var embed = new Discord.MessageEmbed()
-        .setColor("")
-        .setTitle(`Command : Deafen`)
-        .addField(`**Deafened by:**`, `<@${message.author.id}>`)
-        .addField(`**Channel:**`, `<#${message.channel.id}>`)
-        .addField(`**Deleted Messages:**`, `${Message.size}`)
-        .addField(`**Reason:**`, `${Reason}`)
-        .setFooter(`${message.author.username}`)
-        .setTimestamp();
+     var embed = new Discord.MessageEmbed() 
+     .setTitle("Deafen Voice")
+     .addField("Deafen user", deafuser)
+     .setaddField("**Deafen by:**", `<@${message.author.id}>`)
+     .setFooter(`${message.author.tag}`)
+     .setTimestamp()
       deafuser.voice.setDeaf(true)
     message.channel.send(embed);
  
