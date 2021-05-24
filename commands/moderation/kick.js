@@ -44,26 +44,26 @@ module.exports = {
       console.log(`Member Is Going To Get Kick!`);
 
       setTimeout(function() {
-        User.kick({ reason: `${Reason || "No Reason Provided!"}` });
+        User.kick({ reason: `${Reason || "There was no reason!"}` });
       }, 2000);
       let embed = new Discord.MessageEmbed()
         .setColor("")
-        .setTitle(`Mampus Terkick!`)
-        .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Kicked Member`, `${Member.tag} (${Member.id})`)
-        .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
-        .setFooter(`Requested by ${message.author.username}`)
+        .setTitle(`Command : Kick!`)
+        .addField(`**Member kick:**`, `${Member.tag} (${Member.id})`)
+        .addField(`**kicked by:**`, `${message.author.tag} (${message.author.id}`)
+        .addField(`**Reason:**`, `${Reason || "There was no reason!"}`)
+        .setFooter(`${message.author.username}`)
         .setTimestamp();
       if (User && Member.bot === false)
         Member.send(
           `You Have Been Kicked From **${message.guild.name}** For ${Reason ||
-            "No Reason Provided!"}`
+            "There was no reason!"}`
         );
       message.channel.send(embed);
       console.log(
-        `User: ${Member.tag} (${Member.id}) Just Got Kicked From ${
+        `User: ${Member.tag} Just Got Kicked From ${
           message.guild.name
-        } For ${Reason || "No Reason Provided!"}`
+        } For ${Reason || "There was no reason!"}`
       );
     } catch (error) {
       return message.channel
