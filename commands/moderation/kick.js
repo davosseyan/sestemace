@@ -49,8 +49,8 @@ module.exports = {
       let embed = new Discord.MessageEmbed()
         .setColor("")
         .setTitle(`Command : Kick!`)
-        .addField(`**Member kick:**`, `${Member.tag} (${Member.id})`)
-        .addField(`**kicked by:**`, `${message.author.tag} (${message.author.id}`)
+        .addField(`**Member kick:**`, `<@${Member.id}>`)
+        .addField(`**kicked by:**`, `<@${message.author.id}>`)
         .addField(`**Reason:**`, `${Reason || "There was no reason!"}`)
         .setFooter(`${message.author.username}`)
         .setTimestamp();
