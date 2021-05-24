@@ -37,6 +37,7 @@ module.exports = {
       .setTitle(`Command : Unmuted`)
       .addField(`**Member unmute:**`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`**muted by:**`, `${message.author.tag} (${message.author.id}`)
+      .addField(`**Reason:***`, `${Reason || "No Reason Provided!"}`)
       .setFooter(`${message.author.username}`)
       .setTimestamp();
 
