@@ -51,7 +51,7 @@ module.exports = {
         .addField(`**Member Banned:**`, `<@${message.author.id}>`)
         .addField(`**Reason:**`, `${Reason || "There was no reason!"}`)
         .setFooter(`${message.author.username}`)
-       
+        .setTimestamp();
       if (User && Member.bot === false)
         Member.send(
           `You Have Been Banned From **${message.guild.name}** For ${Reason ||
