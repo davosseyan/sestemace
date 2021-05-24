@@ -6,20 +6,21 @@ module.exports = {
   aliases: [],
   description: "Mute A User!",
   usage: "Mute <Mention User> | <Reason>",
-  run: async (client, msg, args) => {
-var deafuser = msg.mentions.members.first();
+  run: async (client, message, args) => {
+var deafuser = message.mentions.members.first();
    
-    if (!msg.member.hasPermission("DEAFEN_MEMBERS")) return msg.channel.send("You don‘t have a \`DEAFEN_MEMBERS\`");
-    if (!deafuser) return msg.channel.send("mention someone");
+    if (!message.member.hasPermission("DEAFEN_MEMBERS")) return message.channel.send("You don‘t have a \`DEAFEN_MEMBERS\`");
+    if (!deafuser) return message.channel.send("mention someone");
  
-  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
-    var muteEmbed = new Discord.MessageEmbed() 
+  if (!message.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return message.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
+    var embed = new Discord.MessageEmbed() 
     .setTitle("Undeafen Voice")
     .addField("**Undeafen user:**", deafuser)
      .addField("**Deafen by:**", `<@${message.author.id}>`)
      .setFooter(`${message.author.tag}`)
-      deafuser.voice.setDeaf(false)
-    msg.channel.send(muteEmbed);
+     .setTimestamp()
+     deafuser.voice.setDeaf(false)
+    message.channel.send(embed);
  
   }
 }
