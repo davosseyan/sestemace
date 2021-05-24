@@ -30,6 +30,8 @@ module.exports = {
       return message.channel.send(`Member Is Already Unmuted!`);
     }
 
+   let Reason = args.slice(1).join(" ");
+ 
     let Embed = new MessageEmbed()
       .setColor("")
       .setTitle(`Command : Unmuted`)
