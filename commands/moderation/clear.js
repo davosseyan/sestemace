@@ -35,12 +35,12 @@ module.exports = {
     message.channel.bulkDelete(args[0]).then(Message => {
       let embed = new Discord.MessageEmbed()
         .setColor("")
-        .setTitle(`udah di apus, sans!`)
-        .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Channel`, `${message.channel.name} (${message.channel.id}`)
-        .addField(`Deleted Messages`, `${Message.size}`)
-        .addField(`Reason`, `${Reason}`)
-        .setFooter(`Requested by ${message.author.username}`)
+        .setTitle(`Command : Clear`)
+        .addField(`**Cleared by:**`, `<@${message.author.id}>`)
+        .addField(`**Channel:**`, `<#${message.channel.id}>`)
+        .addField(`**Deleted Messages:**`, `${Message.size}`)
+        .addField(`**Reason:**`, `${Reason}`)
+        .setFooter(`${message.author.username}`)
         .setTimestamp();
       return message.channel
         .send(embed)
