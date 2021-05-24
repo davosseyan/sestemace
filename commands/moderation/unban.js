@@ -60,8 +60,8 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor("")
       .setTitle(`Command : Unban 🛬`)
-      .addField(`**Unbanned By:**`, `${message.author.tag} (${message.author.id}}`)
-      .addField(`**Unbanned:**`, `${Member.user.tag} (${Member.user.id}`)
+      .addField(`**Unbanned:**`, `<@${Member.user.id}>`)
+      .addField(`**Unbanned By:**`, `<@${message.author.id}>`)
       .addField(`**With Reason:**`, `${Reason || "With out reason"}`)
       .setFooter(`${message.author.username}`)
       .setTimestamp();
