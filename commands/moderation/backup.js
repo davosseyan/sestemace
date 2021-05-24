@@ -16,7 +16,7 @@ name: "backup",
       return message.channel.send(
         `You Don't Have Permission To Use This Command!`
       );
-		const status = args[1];
+		const status = args[0];
 		if(!status){
 			return message.reply(" Select an action between: `create`,`load`!");
 		}
