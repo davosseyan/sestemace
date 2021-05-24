@@ -14,10 +14,10 @@ var deafuser = msg.mentions.members.first();
  
   if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have a \`DEAFEN_MEMBERS\`");
     var muteEmbed = new Discord.MessageEmbed() 
-    .setTitle("Undeafen")
-    .addField("Undeafen user", deafuser)
-    .setFooter(`Undeafen by ${msg.author.tag}`)
-    .setTimestamp()
+    .setTitle("Undeafen Voice")
+    .addField("**Undeafen user:**", deafuser)
+     .addField("**Deafen by:**", `<@${message.author.id}>`)
+     .setFooter(`${message.author.tag}`)
       deafuser.voice.setDeaf(false)
     msg.channel.send(muteEmbed);
  
