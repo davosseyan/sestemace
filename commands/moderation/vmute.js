@@ -30,9 +30,6 @@ Discord.MessagEmbed()
       .setColor("")
       .setTitle(`Command : Voice Mute`)
       .addField(`**Member vmute:**`, `<@${Member.user.id}>`)
-      .addField(`**vmute by:**`, `<@${message.author.id}>`)
-      .setFooter(`${message.author.username}`)
-      .setTimestamp()
 );
     }
   }
