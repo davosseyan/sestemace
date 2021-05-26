@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
 if (!message.member.hasPermission("MUTE_MEMBERS"))
       return message.channel
-        .sendMessage("You dont Have premisssion mute voice")
+        .send("You dont Have premisssion mute voice")
         .then(m => m.delete(5000));
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
       return message
@@ -17,7 +17,7 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
         .then(msg => msg.delete(6000));
 
     if (message.mentions.users.size === 0) {
-      return message.reply("pleade mention someone");
+      return message.reply("please mention someone");
     }
     let muteMember = message.guild.member(message.mentions.users.first());
     if (!muteMember) {
