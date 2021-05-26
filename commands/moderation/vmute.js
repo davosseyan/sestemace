@@ -25,7 +25,7 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
     }
     muteMember.setMute(true);
     if (muteMember) {
-      message.channel.sendMessage(new 
+      message.channel.send(new 
 Discord.MessagEmbed()
       .setColor("")
       .setTitle(`Command : Voice Mute`)
