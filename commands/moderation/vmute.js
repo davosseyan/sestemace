@@ -27,7 +27,13 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
     if (muteMember) {
       message.channel.sendMessage(new 
 Discord.MessagEmbed()
-.setColor("")
+      .setColor("")
+      .setTitle(`Command : Voice Mute`)
+      .addField(`**Member vmute:**`, `<@${Member.user.id}>`)
+      .addField(`**vmute by:**`, `<@${message.author.id}>`)
+      .setFooter(`${message.author.username}`)
+      .setTimestamp();
+);
     }
   }
 }
