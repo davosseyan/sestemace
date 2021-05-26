@@ -25,7 +25,9 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
     }
     muteMember.setMute(true);
     if (muteMember) {
-      message.channel.sendMessage("Muted voice ");
+      message.channel.sendMessage(new 
+Discord.MessagEmbed()
+.setColor("")
     }
   }
 }
