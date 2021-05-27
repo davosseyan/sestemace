@@ -14,7 +14,7 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
     if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
       return message
         .reply("I Don't Have `MUTE_MEMBERS` Permission")
-        .then(msg => msg.delete(6000));
+        .then(message => message.delete(6000));
 
     if (message.mentions.users.size === 0) {
       return message.reply("please mention someone");
@@ -29,7 +29,7 @@ if (!message.member.hasPermission("MUTE_MEMBERS"))
 Discord.MessagEmbed()
       .setColor("")
       .setTitle(`Command : Voice Mute`)
-      .addField(`**Member vmute:**`, `<@${Member.user.id}>`)
+      .addField(`Muted`)
 );
     }
   }
