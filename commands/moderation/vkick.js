@@ -13,16 +13,16 @@ module.exports = {
 
     if (!message.mentions.members.first())
       return message.channel.send(
-        `Please Mention User That You Want To Kick From Voice Channel!`
+        `please mention someone to kick voice!`
       );
 
     let { channel } = message.mentions.members.first().voice;
 
     if (!channel)
-      return message.channel.send(`User Is Not In Any Voice Channel!`);
+      return message.channel.send(`This person not connected voice`);
 
     message.mentions.members.first().voice.kick();
     
-    message.channel.send(`User Has Been Kicked From Voice Channel!`)
+    message.channel.send(`kick voice successfully!`)
   }
 }
