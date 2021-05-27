@@ -6,31 +6,20 @@ module.exports = {
   aliases: [],
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
-  run: async (client, message, args) => {
-if (!message.member.hasPermission("MUTE_MEMBERS"))
-      return message.channel
-        .send("You dont Have premisssion mute voice")
-        .then(m => m.delete(5000));
-    if (!message.guild.member(client.user).hasPermission("MUTE_MEMBERS"))
-      return message
-        .reply("I Don't Have `MUTE_MEMBERS` Permission")
-        .then(message => message.delete(6000));
-
-    if (message.mentions.users.size === 0) {
-      return message.reply("please mention someone");
-    }
-    let muteMember = message.guild.member(message.mentions.users.first());
-    if (!muteMember) {
-      return message.reply("Restart");
-    }
-    muteMember.setMute(true);
-    if (muteMember) {
-      message.channel.send(new 
-Discord.MessagEmbed()
-      .setColor("")
-      .setTitle(`Command : Voice Mute`)
-      .addField(`Muted`)
-);
-    }
+  run: async (client, msg, args) => {
+var muteUser = msg.mentions.members.first();
+   
+    if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("YOU DON'T HAVE ENOUGH PERMISSION TO DO ID");
+    if (!muteUser) return msg.channel.send("کەسێک دیاری بکە ");
+ 
+  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I DON'T HAVE ENOUGH PERMISSION TO DO IT");
+    var muteEmbed = new Discord.MessageEmbed() 
+    .setTitle("Mute Voice")
+    .addField("Muted user", muteUser)
+    .setFooter(`Muted by ${msg.author.tag}`)
+    .setTimestamp()
+      muteUser.voice.setMute(true)
+    msg.channel.send(muteEmbed);
+ 
   }
 }
