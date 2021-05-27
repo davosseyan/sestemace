@@ -10,9 +10,9 @@ module.exports = {
 var unmuteUser = msg.mentions.members.first();
    
     if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You don‘t have enough permission to do it");
-    if (!muteUser) return msg.channel.send("kasek mention bka");
+    if (!muteUser) return msg.channel.send("please mention someone to vunmute");
  
-  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("sarata rolem bare inja bakarm hena");
+  if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have enough permission to do it");
     var muteEmbed = new Discord.MessageEmbed() 
     .setTitle("Unmute Voice")
     .addField("Unmute user", unmuteUser)
