@@ -7,7 +7,7 @@ module.exports = {
   description: "Ban A Member!",
   usage: "Ban <Mention Member>",
   run: async (client, msg, args) => {
-var unmuteUser = msg.mentions.members.first();
+var muteUser = msg.mentions.members.first();
    
     if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You don‘t have enough permission to do it");
     if (!muteUser) return msg.channel.send("please mention someone to vunmute");
@@ -15,10 +15,10 @@ var unmuteUser = msg.mentions.members.first();
   if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("I don‘t have enough permission to do it");
     var muteEmbed = new Discord.MessageEmbed() 
     .setTitle("Unmute Voice")
-    .addField("Unmute user", unmuteUser)
+    .addField("Unmute user", muteUser)
     .setFooter(`Unmuted by ${msg.author.tag}`)
     .setTimestamp()
-      unmuteUser.voice.setMute(false)
+     muteUser.voice.setMute(false)
     msg.channel.send(muteEmbed);
  
   }
