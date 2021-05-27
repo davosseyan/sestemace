@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, msg, args) => {
 var unmuteUser = msg.mentions.members.first();
    
-    if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("pewist ba role a bo anjamdane amkara");
+    if (!msg.member.hasPermission("MANAGE_MESSAGES")) return msg.channel.send("You don‘t have enough permission to do it");
     if (!muteUser) return msg.channel.send("kasek mention bka");
  
   if (!msg.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return msg.channel.send("sarata rolem bare inja bakarm hena");
