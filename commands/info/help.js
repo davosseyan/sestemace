@@ -41,9 +41,7 @@ A!moveall - to move all members
 A!slowmode - Set the channel slowmode
 A!allbots - For View All bot in server
 A!roleinfo - for view role info
-`\`\`\`);
+\`\`\``);
   
-    
-   
     }
 }
