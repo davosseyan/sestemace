@@ -90,7 +90,7 @@ setInterval(async () => {
   await fetch('https://discord-modera-fun-bot.glitch.me').then(console.log('Pinged!'))
 }, 240000)
 
-client.login("ODQzOTQ1NzY2MDExNTM1Mzcy.YKLPvg.RQEc3EDOMBLFqTh3C9i7HQc4sdw");
+client.login("ODA2NDI3NDA5NTUzMTYyMjQw.YBpSDQ.b-Tn1nEanN6oX_0ejXRyGTnh2Yc");
 
   client.on("ready", () => {
   client.channels.cache.get("841077291517214781").join();
