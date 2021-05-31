@@ -10,7 +10,8 @@ module.exports = {
     
    
     
-  message.channel.send(`\`\`\`**General Commands**
+  message.channel.send(`\`\`\`[vote](https://top.gg/bot/711328570374619207)
+**General Commands**
 A!userinfo - Get your/someones information on Discord
 A!server - Get the server information
 A!botinfo - Ace bot info
