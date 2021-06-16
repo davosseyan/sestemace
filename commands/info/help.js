@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const { Prefix } = require("../../config.js");
 
 module.exports = {
   name: "help",
@@ -10,7 +9,7 @@ module.exports = {
     
    
     
-  message.channel.send(`\`\`\`[vote](https://top.gg/bot/711328570374619207)
+  message.channel.send(`\`\`\`[vote]()
 **General Commands**
 A!userinfo - Get your/someones information on Discord
 A!server - Get the server information
