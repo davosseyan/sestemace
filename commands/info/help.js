@@ -13,7 +13,7 @@ module.exports = {
 **General Commands**
 A!userinfo - Get your/someones information on Discord
 A!server - Get the server information
-A!botinfo - Ace bot info
+A!botinfo - Zalm bot info
 A!weather - To know world's weather | usage : A!weather [state/region]
 A!avatar - To get you/someones avatar
 A!serveravatar - To get server's avatar
