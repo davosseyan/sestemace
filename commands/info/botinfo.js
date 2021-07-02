@@ -27,7 +27,7 @@ const created = moment(client.user.createdAt).format("YYYY-MM-DD");
      
        let embed = new Discord.MessageEmbed()
         .setTitle(`Info ${client.user.username}`)
-        .setColor("")
+        .setColor("#2ecc71")
         .setThumbnail(client.user.displayAvatarURL())
         .addField(`**My Name:**`,`${client.user.tag}`)
         .addField(`**My ID**`,`${client.user.id}`)
@@ -39,7 +39,7 @@ const created = moment(client.user.createdAt).format("YYYY-MM-DD");
         .addField(`**Guilds**`,`${client.guilds.cache.size}`)
         .addField(`**Channels**`,`${client.channels.cache.size}`)
         .addField(`**Users**`,`${client.users.cache.size}`)
-        .addField(`**Creator**`,`[<@817049111454154752>]`)
+        .addField(`**Creator**`,`[<@696788118703177769>]`)
         .setFooter(`Requested By ${message.author.username}`)
         .setTimestamp();
     message.channel.send(embed);
