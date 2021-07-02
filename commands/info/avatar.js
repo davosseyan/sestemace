@@ -15,7 +15,7 @@ module.exports = {
       message.member;
 
     let embed = new Discord.MessageEmbed()
-      .setColor("")
+      .setColor("#2ecc71")
       .addField(
         "Links",
         `[png](${Member.user.displayAvatarURL({
