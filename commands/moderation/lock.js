@@ -20,7 +20,7 @@ if (!message.guild.member(message.author).hasPermission("MANAGE_CHANNELS"))
           .addField("**Guild name:**", message.guild.name)
           .addField("**Channel:**", `<#${message.channel.id}>`)
           .addField("**Locked by:**", `<@${message.author.id}>`, true)
-          .setColor("RANDOM");
+          .setColor("#2ecc71");
         return message.channel.send(embed);
       });
   }
