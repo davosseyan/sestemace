@@ -34,7 +34,7 @@ module.exports = {
 
     message.channel.bulkDelete(args[0]).then(Message => {
       let embed = new Discord.MessageEmbed()
-        .setColor("")
+        .setColor("#2ecc71")
         .setTitle(`Command : Clear`)
         .addField(`**Cleared by:**`, `<@${message.author.id}>`)
         .addField(`**Channel:**`, `<#${message.channel.id}>`)
