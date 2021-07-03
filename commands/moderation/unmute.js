@@ -33,7 +33,7 @@ module.exports = {
    let Reason = args.slice(1).join(" ");
  
     let Embed = new MessageEmbed()
-      .setColor("")
+      .setColor("#2ecc71")
       .setTitle(`Command : Unmute`)
       .addField(`**Member unmute:**`, `${Member.user.tag} (${Member.user.id})`)
       .addField(`**muted by:**`, `${message.author.tag} (${message.author.id}`)
