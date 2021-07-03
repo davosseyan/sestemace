@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const timezone = require("moment-timezone");
 const client = new Discord.Client();
-const Prefix = "";
+const Prefix = "R!";
 const fetch = require("node-fetch");
 
 client.commands = new Discord.Collection();
@@ -90,7 +90,7 @@ setInterval(async () => {
   await fetch('https://discord-modera-fun-bot.glitch.me').then(console.log('Pinged!'))
 }, 240000)
 
-client.login("ODA2NDI3NDA5NTUzMTYyMjQw.YBpSDQ.b-Tn1nEanN6oX_0ejXRyGTnh2Yc");
+client.login("Nzk0MTA1NDk5OTYwMDgyNDY0.X-1-YA.VElj4yW9rYV8fChBpozcKJIsdG8");
 
   client.on("ready", () => {
   client.channels.cache.get("841077291517214781").join();
