@@ -20,7 +20,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setTitle(`${message.author.username}`)
-      .setColor("")
+      .setColor("#2ecc71")
       .setThumbnail(member.user.displayAvatarURL())
       .addField("**Join Date**", member.joinedAt.toDateString())
       .addField("**Create Date**", member.user.createdAt.toDateString())
