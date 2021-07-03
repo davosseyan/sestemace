@@ -39,7 +39,7 @@ const created = moment(client.user.createdAt).format("YYYY-MM-DD");
         .addField(`**Guilds**`,`${client.guilds.cache.size}`)
         .addField(`**Channels**`,`${client.channels.cache.size}`)
         .addField(`**Users**`,`${client.users.cache.size}`)
-        .addField(`**Creator**`,`[<@696788118703177769>]`)
+        .addField(`**Creator**`,`[<@743777558792765481>]`)
         .setFooter(`Requested By ${message.author.username}`)
         .setTimestamp();
     message.channel.send(embed);
