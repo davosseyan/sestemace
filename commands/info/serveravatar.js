@@ -13,7 +13,7 @@ module.exports = {
     
       embed.setDescription(`[Download](${message.guild.iconURL({ dynamic: true, size: 1024 })})`)
       embed.setImage(message.guild.iconURL({ dynamic: true, size: 1024 }))
-      embed.setColor("BLACK")
+      embed.setColor("#2ecc71")
     
       message.channel.send(embed)
     
