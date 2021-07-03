@@ -16,7 +16,7 @@ if (!args[0]) return message.channel.send("**Please Mention A Role!**")
             true: "Yes"
         }
         let roleembed = new Discord.MessageEmbed()
-            .setColor("#00ff00")
+            .setColor("#2ecc71")
             .setAuthor("Role Info")
             .setThumbnail(message.guild.iconURL())
             .addField("**ID**", `\`${role.id}\``, true)
