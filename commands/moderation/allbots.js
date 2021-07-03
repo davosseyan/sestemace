@@ -15,7 +15,7 @@ let i = 1;
     
     const embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL())
-      .setColor("BLACK")
+      .setColor("#2ecc71")
       .setDescription(
         `**${
           message.guild.members.cache.filter(m => m.user.bot).size
