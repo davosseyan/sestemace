@@ -23,7 +23,7 @@ try {
             memberInvites.forEach(invite => index += invite.uses);
 
             let embed = new Discord.MessageEmbed()
-                .setColor("YELLOW")
+                .setColor("#2ecc71")
                 .setFooter(message.guild.name, message.guild.iconURL())
                 .setAuthor(`Invite Tracker for: ${message.guild.name}`)
                 .setDescription(`Information on Invites of:  ${member.displayName}`)
