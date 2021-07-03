@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const timezone = require("moment-timezone");
 const client = new Discord.Client();
-const Prefix = "R!";
+const Prefix = "/";
 const fetch = require("node-fetch");
 
 client.commands = new Discord.Collection();
