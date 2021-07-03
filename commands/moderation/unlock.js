@@ -19,7 +19,7 @@ run: async (client, message, args) => {
           .addField("**Guild name:**", message.guild.name)
           .addField("**Channel:**", `<#${message.channel.id}>`)
           .addField("**Unlocked by:**", `<@${message.author.id}>`, true)
-          .setColor("RANDOM");
+          .setColor("#2ecc71");
         return message.channel.send(embed);
       });
   }
