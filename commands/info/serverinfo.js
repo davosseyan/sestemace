@@ -19,7 +19,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
        .setTitle(guild.name + " Info")
-       .setColor("")
+       .setColor("#2ecc71")
        .setThumbnail(guild.iconURL())
        .addField(`🆔 **__Server ID :__**`, `${guild.id}`, true)
        .addField(`📆 **__Created On :__**`, message.guild.createdAt.toLocaleString())
